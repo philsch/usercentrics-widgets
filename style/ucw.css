@@ -22,6 +22,7 @@
 .uc-widget-embedding {
     position: absolute;
     display: grid;
+    grid-template-columns: auto;
     justify-content: center;
     top: 50%;
     left: 50%;
@@ -50,6 +51,11 @@
     margin: 1.2em 0;
     text-align: center;
     max-width: 400px;
+}
+
+/* UC Widget embedding container for buttons */
+.uc-widget-controls {
+    text-align: center;
 }
 
 /* UC Widget embedding accept button styles */
