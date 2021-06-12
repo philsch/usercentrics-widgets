@@ -18,7 +18,7 @@ class WidgetFactory {
       }
       return new Iframe(el);
     } catch (e) {
-      console.debug(e);
+      console.error(e);
       return new Iframe(el);
     }
   }

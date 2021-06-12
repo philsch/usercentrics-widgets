@@ -1,8 +1,9 @@
+import { widgetStore } from '../lib/WidgetStore';
+import UcBridge from '../lib/UcBridge';
+
 /**
  * Base widget class
  */
-import UcBridge from '../lib/UcBridge';
-
 class Base {
   /**
    * Base constructor for all widgets
@@ -63,16 +64,37 @@ class Base {
 
   /**
    * Logic for replacing the embedding with the original content
+   *
+   * @param {boolean} fromWidget Indicates if the activation happened from the current Widget
    */
-  activate () {
-    const cmp = new UcBridge();
-    cmp.setConsent(this.ucId);
+  activate (fromWidget) {
+    widgetStore.unregister(this.ucId, this);
+    widgetStore.activate(this.ucId);
+
+    if (fromWidget) {
+      const cmp = new UcBridge();
+      cmp.setConsent(this.ucId);
+    }
   }
 
   /**
    * Render logic to show the widget
    */
   render () {
+    const container = document.createElement('div');
+
+    container.innerHTML = this.getEmbedding();
+    container.setAttribute('class', 'uc-widget-container');
+
+    this.el.replaceWith(container);
+
+    container
+      .getElementsByClassName('uc-widget-accept')[0]
+      .addEventListener('click', this.activate.bind(this, true));
+
+    this.container = container;
+
+    widgetStore.register(this.ucId, this);
   }
 }
 

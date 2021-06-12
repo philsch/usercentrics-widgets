@@ -1,8 +1,8 @@
 import babel from 'rollup-plugin-babel';
 import strip from '@rollup/plugin-strip';
-import { terser } from 'rollup-plugin-terser';
+import {terser} from 'rollup-plugin-terser';
 
-export default [
+export default commandLineArgs => [
   // modern browsers
   {
     input: 'src/main.js',
@@ -11,9 +11,9 @@ export default [
       format: 'iife'
     },
     plugins: [
-      strip({
+      !commandLineArgs.configDebug ? strip({
         functions: ['console.*']
-      }),
+      }) : undefined,
       babel({
         exclude: 'node_modules/**',
         presets: [
@@ -36,9 +36,9 @@ export default [
       format: 'iife'
     },
     plugins: [
-      strip({
+      !commandLineArgs.configDebug ? strip({
         functions: ['console.*']
-      }),
+      }) : undefined,
       babel({
         exclude: 'node_modules/**',
         presets: [

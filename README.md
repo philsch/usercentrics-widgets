@@ -2,9 +2,18 @@ Usercentrics Widgets
 =====================
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/standard/semistandard)
+![GitHub file size in bytes](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.js?style=flat-square)
 
 Lightweight placeholders for third party content of your website (e.g. Youtube Videos) compatible with the 
 [Usercentrics CMP](https://usercentrics.com).
+
+```
+
+TODO
+
+- listen to UC_UI_VIEW_CHANGED event to react on consents from CMP actions
+
+```
 
 #### Disclaimer
 
@@ -14,7 +23,7 @@ Lightweight placeholders for third party content of your website (e.g. Youtube V
   
 * This is a community project and no official product from Usercentrics
 
-* It's a young project, see list of compatible technologies and feel free to contribute! 
+* I have just started with this project, see list of compatible technologies and feel free to contribute! 
 
 ## 🚀 Quickstart
 

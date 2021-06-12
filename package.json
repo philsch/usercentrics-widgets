@@ -4,7 +4,7 @@
   "description": "Lightweight placeholders compatible with Usercentrics CMP",
   "main": "index.js",
   "scripts": {
-    "watch": "./node_modules/.bin/rollup -c rollup.config.js -w",
+    "watch": "./node_modules/.bin/rollup -c rollup.config.js --configDebug -w",
     "build:css": "./node_modules/.bin/cleancss -o ./dist/ucw.min.css ./style/ucw.css",
     "build": "npm run build:css && ./node_modules/.bin/rollup -c rollup.config.js",
     "lint": "./node_modules/.bin/semistandard --verbose ./src/** | ./node_modules/.bin/snazzy",

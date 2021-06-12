@@ -4,7 +4,7 @@ class UcBridge {
    *
    * @param {function} callback
    */
-  waitForReady (callback) {
+  waitForCmp (callback) {
     if (window.UC_UI && window.UC_UI.isInitialized()) {
       callback();
     } else {
@@ -15,11 +15,23 @@ class UcBridge {
   }
 
   /**
+   * Wait for specific consent to be given from the CMP itself
+   *
+   * @param {string} ucId Usercentrics Service ID
+   * @param {function} callback Called when consent was given inside the CMP
+   */
+  waitForCmpConsent (ucId, callback) {
+    this.waitForCmp(() => {
+      (this.getConsent(ucId) === true) && callback();
+    });
+  }
+
+  /**
    * Indicates the Usercentrics CMP is ready
    *
    * @return {boolean}
    */
-  isReady () {
+  isCmpReady () {
     return window.UC_UI && window.UC_UI.isInitialized();
   }
 
@@ -29,7 +41,7 @@ class UcBridge {
    * @param {string} ucId Usercentrics Service ID
    */
   setConsent (ucId) {
-    if (!this.isReady()) {
+    if (!this.isCmpReady()) {
       throw new Error('Usercentrics CMP is not ready!');
     }
     window.UC_UI.acceptService(ucId); // TODO: promise (also in IE11!)
@@ -38,11 +50,21 @@ class UcBridge {
   /**
    * Retrieves the current stored consent decision from the Usercentrics CMP
    *
-   * @param {string} ucId
+   * @param {string} ucId Usercentrics Service ID
    * @return {boolean}
    */
   getConsent (ucId) {
-
+    try {
+      const consents = window.UC_UI.getServicesBaseInfo();
+      for (let i = 0; i < consents.length; i++) {
+        if (consents[i].id === ucId && consents[i].consent.status) {
+          return true;
+        }
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
   }
 }
 
