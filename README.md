@@ -1,6 +1,7 @@
 Usercentrics Widgets 
 =====================
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/philsch/usercentrics-widgets?style=flat-square)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/standard/semistandard)
 ![GitHub file size in bytes](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.js?style=flat-square)
 
@@ -12,6 +13,9 @@ Lightweight placeholders for third party content of your website (e.g. Youtube V
 TODO
 
 - listen to UC_UI_VIEW_CHANGED event to react on consents from CMP actions
+- add calculated parent widthxheight again?
+- IE11 replaceWith alternative + CSS fix
+- read open source best practises https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility 
 
 ```
 
