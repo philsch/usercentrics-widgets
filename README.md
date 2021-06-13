@@ -7,7 +7,7 @@ Usercentrics Widgets
 ![size ucw.js](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.js?style=flat-square&label=/dist/ucw.js)
 ![size ucw.legacy.js](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.legacy.js?style=flat-square&label=/dist/ucw.legacy.js)
 
-Lightweight placeholders for third party content of your website (e.g. Youtube Videos) compatible with the 
+Lightweight customizable placeholders for third party content of your website (e.g. Youtube Videos) compatible with the 
 [Usercentrics CMP](https://usercentrics.com).
 
 #### Disclaimer
@@ -70,6 +70,8 @@ All widgets can be changed via data attributes:
 | `data-accept` | Label for the accept button   | `data-accept="ok"`             |
 
 ## 🎨 Styling
+
+![screenshot customization](/example/customized.png)
 
 Instead of using the predefined CSS file, you can use your own. See [/style/ucw.css](/style/ucw.css) as a reference
 which CSS classes need to be defined and [/example/customized.html](/example/customized.html) as an example.
