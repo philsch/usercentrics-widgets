@@ -71,7 +71,9 @@ All widgets can be changed via data attributes:
 
 ## 🎨 Styling
 
-![screenshot customization](/example/customized.png)
+<p align="center">
+  <img src="/example/customized.png" alt="screenshot customization" height="400px"/>
+</p>
 
 Instead of using the predefined CSS file, you can use your own. See [/style/ucw.css](/style/ucw.css) as a reference
 which CSS classes need to be defined and [/example/customized.html](/example/customized.html) as an example.
