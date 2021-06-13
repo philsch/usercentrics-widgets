@@ -57,8 +57,8 @@ class UcBridge {
     try {
       const consents = window.UC_UI.getServicesBaseInfo();
       for (let i = 0; i < consents.length; i++) {
-        if (consents[i].id === ucId && consents[i].consent.status) {
-          return true;
+        if (consents[i].id === ucId) {
+          return !!consents[i].consent.status;
         }
       }
       return false;

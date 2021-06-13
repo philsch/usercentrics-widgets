@@ -1,5 +1,8 @@
 import Base from './Base';
 
+/**
+ * Common class for all iframes
+ */
 class Iframe extends Base {
   activate (fromWidget) {
     super.activate(fromWidget);

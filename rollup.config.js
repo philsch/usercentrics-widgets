@@ -1,5 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import strip from '@rollup/plugin-strip';
+import polyfill from 'rollup-plugin-polyfill';
 import {terser} from 'rollup-plugin-terser';
 
 export default commandLineArgs => [
@@ -39,6 +40,7 @@ export default commandLineArgs => [
       !commandLineArgs.configDebug ? strip({
         functions: ['console.*']
       }) : undefined,
+      polyfill(['./replaceWith.js']),
       babel({
         exclude: 'node_modules/**',
         presets: [

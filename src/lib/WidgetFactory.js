@@ -1,6 +1,6 @@
-import Youtube from './widgets/Youtube';
-import Iframe from './widgets/Iframe';
-import UrlParser from './lib/UrlParser';
+import Youtube from '../widgets/Youtube';
+import Iframe from '../widgets/Iframe';
+import UrlParser from './UrlParser';
 
 class WidgetFactory {
   /**

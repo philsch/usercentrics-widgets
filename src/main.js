@@ -1,4 +1,4 @@
-import WidgetFactory from './WidgetFactory';
+import WidgetFactory from './lib/WidgetFactory';
 import { toArray } from './lib/HtmlCollectionHelper';
 import { widgetStore } from './lib/WidgetStore';
 

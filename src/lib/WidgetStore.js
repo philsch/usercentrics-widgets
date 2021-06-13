@@ -71,9 +71,22 @@ class WidgetStore {
   linkCmp () {
     const cmp = new UcBridge();
 
+    // wait for the initial CMP consent
     for (const ucId of Object.keys(this.store)) {
       cmp.waitForCmpConsent(ucId, () => this.activate(ucId));
     }
+
+    // react on changed of the CMP based UI events
+    window.addEventListener('UC_UI_VIEW_CHANGED', (e) => {
+      if (e.detail && (e.detail.previousView === 'NONE' || e.detail.previousView === 'PRIVACY_BUTTON')) {
+        return;
+      }
+      cmp.waitForCmpConsent('BJz7qNsdj-7', () => {
+        for (const ucId of Object.keys(this.store)) {
+          cmp.waitForCmpConsent(ucId, () => this.activate(ucId));
+        }
+      });
+    });
   }
 }
 

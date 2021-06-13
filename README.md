@@ -12,9 +12,6 @@ Lightweight placeholders for third party content of your website (e.g. Youtube V
 
 TODO
 
-- listen to UC_UI_VIEW_CHANGED event to react on consents from CMP actions
-- add calculated parent widthxheight again?
-- IE11 replaceWith alternative + CSS fix
 - read open source best practises https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility 
 
 ```
@@ -27,7 +24,9 @@ TODO
   
 * This is a community project and no official product from Usercentrics
 
-* I have just started with this project, see list of compatible technologies and feel free to contribute! 
+## 🐞 Report bugs
+
+I have just started with this project, please create a Github issue if you have any problem, thanks! 
 
 ## 🚀 Quickstart
 
@@ -66,6 +65,3 @@ Refer to the [/example/](./example) directory for a complete example.
 Instead of using the predefined CSS file, you can use your own. See [/style/ucw.css](/style/ucw.css) as a reference
 which CSS classes need to be defined.
 
-## 🔮 Contribution
-
-Feel free to contribute to this project by creating new issues or pull requests.

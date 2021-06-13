@@ -1,6 +1,9 @@
 import Iframe from './Iframe';
 import UrlParser from '../lib/UrlParser';
 
+/**
+ * Youtube placeholder
+ */
 class Youtube extends Iframe {
   /**
    * Show background using the Usercentrics Proxy, fallback to default on error
