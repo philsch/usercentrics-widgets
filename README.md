@@ -2,8 +2,11 @@ Usercentrics Widgets
 =====================
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/philsch/usercentrics-widgets?style=flat-square)
+[![Build Status](https://travis-ci.com/philsch/usercentrics-widgets.svg?branch=master)](https://travis-ci.com/philsch/usercentrics-widgets)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/standard/semistandard)
-![GitHub file size in bytes](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.js?style=flat-square)
+![size ucw.js](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.js?style=flat-square&label=/dist/ucw.js)
+![size ucw.legacy.js](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.legacy.js?style=flat-square&label=/dist/ucw.legacy.js)
+![size ucw.min.css](https://img.shields.io/github/size/philsch/usercentrics-widgets/dist/ucw.min.css?style=flat-square&label=/dist/ucw.min.css)
 
 Lightweight placeholders for third party content of your website (e.g. Youtube Videos) compatible with the 
 [Usercentrics CMP](https://usercentrics.com).
