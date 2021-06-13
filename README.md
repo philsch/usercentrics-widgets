@@ -12,15 +12,15 @@ Lightweight placeholders for third party content of your website (e.g. Youtube V
 
 * Unlike the [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector), this library 
   **does not block** third party content automatically. You have to change your website according the documentation 
-  in this README
+  in this README!
   
-* This is a community project and no official product from Usercentrics
+* This is a community project and no official product from Usercentrics.
 
 ## 🐞 Report bugs
 
-I have just started with this project, please create a Github issue if you have any problem, thanks! 
+I have just started with this project, please create a Github issue if you encounter any bugs, thanks! 
 
-## 🚀 Quickstart
+## 🚀 Howto
 
 1. Setup Usercentrics CMP
 1. For each `iframe` elements you want to replace
@@ -45,15 +45,14 @@ I have just started with this project, please create a Github issue if you have 
 Instead of downloading the files you can also use the *jsdelivr CDN*, however it's recommended
 to host the files on your server to avoid third party requests. 
 
-Refer to the [/example/](./example) directory for a complete example.
+Refer to the [/example/](./example) directory for complete examples.
 
 ## 📺 Supported technologies
 
 * ✅ all iframes
-* ⏳ background images only four Youtube at the moment
+* ⏳ background images only for Youtube at the moment
 
 ## 🎨 Customization
 
 Instead of using the predefined CSS file, you can use your own. See [/style/ucw.css](/style/ucw.css) as a reference
 which CSS classes need to be defined.
-
