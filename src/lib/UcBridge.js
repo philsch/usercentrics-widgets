@@ -44,7 +44,7 @@ class UcBridge {
     if (!this.isCmpReady()) {
       throw new Error('Usercentrics CMP is not ready!');
     }
-    window.UC_UI.acceptService(ucId); // TODO: promise (also in IE11!)
+    window.UC_UI.acceptService(ucId); // TODO: should we wait for the CMP consent server answer?
   }
 
   /**

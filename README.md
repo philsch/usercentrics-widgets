@@ -8,14 +8,6 @@ Usercentrics Widgets
 Lightweight placeholders for third party content of your website (e.g. Youtube Videos) compatible with the 
 [Usercentrics CMP](https://usercentrics.com).
 
-```
-
-TODO
-
-- read open source best practises https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility 
-
-```
-
 #### Disclaimer
 
 * Unlike the [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector), this library 

@@ -1,4 +1,6 @@
-// From https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith
+/* eslint-disable */
+
+// From https://www.npmjs.com/package/child-replace-with-polyfill
 function ReplaceWithPolyfill() {
   "use-strict"; // For safari, and IE > 10
   var parent = this.parentNode,
@@ -32,3 +34,4 @@ if (!CharacterData.prototype.replaceWith)
 if (!DocumentType.prototype.replaceWith)
   DocumentType.prototype.replaceWith = ReplaceWithPolyfill;
 
+/* eslint-enable */

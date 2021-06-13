@@ -53,7 +53,6 @@ class WidgetStore {
    * @param {string} ucId Usercentrics Service ID
    */
   activate (ucId) {
-    console.log('activate called');
     const widgets = this.store[ucId];
 
     if (widgets) {
