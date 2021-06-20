@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+## Usercentrics Widgets
 
-You can use the [editor on GitHub](https://github.com/philsch/usercentrics-widgets/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Lighweight and customizable placeholders for your third party content (like Youtube Videos, Google Maps etc.) compatible with the [Usercentrics CMP](https://usercentrics.com) (subscription required).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 📦 Small footprint
 
-### Markdown
+The additional JavaScript library adds less than 5kb (< 2.5kb compressed) to your existing website.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 💡 Easy to use
 
-```markdown
-Syntax highlighted code block
+Just some easy steps to make your **iframe** GDPR compliant:
 
-# Header 1
-## Header 2
-### Header 3
+* change the `src` attribute to `data-src`
+* add the `uc-widget` class
+* add the `data-uc-id` attribute (the Usercentrics Service ID you want to linke the iframe to)
+* finally make sure this script is added at the end of your HTML `body`
 
-- Bulleted
-- List
+A complete example looks like:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Youtube example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- the Usercentrics CMP code -->
+    <script id="usercentrics-cmp" data-settings-id="XXX"
+            src="https://app.usercentrics.eu/browser-ui/latest/bundle.js" defer=""></script>
+    <!-- CSS of this plugin (or your own version) -->
+    <link type="text/css" rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/gh/philsch/usercentrics-widgets@main/dist/ucw.min.css"/>
+</head>
+<body>
+<div style="text-align: center; margin: 20px">
+    <!-- adjusted Youtube iframe -->
+    <iframe width="560" height="315"
+            data-src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A" 
+            data-uc-id="BJz7qNsdj-7" class="uc-widget"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+</div>
+<!-- finally adding this plugin -->
+<script src="https://cdn.jsdelivr.net/gh/philsch/usercentrics-widgets@main/dist/ucw.js"></script>
+</body>
+</html>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### :octocat: Find more information 
 
-### Jekyll Themes
+Please see the [Github project](https://github.com/philsch/usercentrics-widgets) for more information.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/philsch/usercentrics-widgets/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
