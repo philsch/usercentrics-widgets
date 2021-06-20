@@ -1,6 +1,7 @@
 ## Usercentrics Widgets
 
-Lighweight and customizable placeholders for your third party content (like Youtube Videos, Google Maps etc.) compatible with the [Usercentrics CMP](https://usercentrics.com) (subscription required).
+Lightweight and customizable placeholders for your third party content (like Youtube Videos, Google Maps etc.) 
+compatible with the [Usercentrics CMP](https://usercentrics.com) (subscription required).
 
 ### 📦 Small footprint
 
@@ -13,7 +14,7 @@ Just some easy steps to make your **iframe** GDPR compliant:
 * change the `src` attribute to `data-src`
 * add the `uc-widget` class
 * add the `data-uc-id` attribute (the Usercentrics Service ID you want to linke the iframe to)
-* finally make sure this script is added at the end of your HTML `body`
+* finally, make sure to add this plugin script at the end of your HTML `body`
 
 A complete example looks like:
 
@@ -38,7 +39,6 @@ A complete example looks like:
             data-src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A" 
             data-uc-id="BJz7qNsdj-7" class="uc-widget"
             title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
     </iframe>
 </div>
@@ -48,8 +48,9 @@ A complete example looks like:
 </html>
 ```
 
-### :octocat: Find more information 
+### 📚 Find more information 
 
-Please see the [Github project](https://github.com/philsch/usercentrics-widgets) for more information.
+Please see the [Github project](https://github.com/philsch/usercentrics-widgets) for examples and a complete
+documentation. 
 
 
