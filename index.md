@@ -1,7 +1,7 @@
 ## Usercentrics Widgets
 
-Lightweight and customizable placeholders for your third party content (like Youtube Videos, Google Maps etc.) 
-compatible with the [Usercentrics CMP](https://usercentrics.com) (subscription required).
+Lightweight and customizable placeholders for your embedded third party content (like Youtube video iframe, Google Maps etc.) 
+compatible with the [Usercentrics CMP](https://usercentrics.com).
 
 ### 📦 Small footprint
 
