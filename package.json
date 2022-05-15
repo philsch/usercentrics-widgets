@@ -1,6 +1,6 @@
 {
   "name": "usercentrics-widgets",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lightweight placeholders compatible with Usercentrics CMP",
   "browser": "./dist/ucw.js",
   "files": [
